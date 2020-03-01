@@ -4,7 +4,7 @@ import Header from '../Components/Header/Header'
 const Home = () => (
   <div>
     <Head>
-      <title>Create Next App</title>
+      <title>Afterburn</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
