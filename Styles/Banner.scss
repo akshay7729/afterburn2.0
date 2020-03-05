@@ -1,0 +1,50 @@
+@import './Config.scss';
+
+.banner1-col{
+    .col-inner{
+        @include border-radius(40px);
+        -webkit-box-shadow: 9px 9px 5px 0px rgba(221,221,221,1);
+        -moz-box-shadow: 9px 9px 5px 0px rgba(221,221,221,1);
+        box-shadow: 9px 9px 5px 0px rgba(221,221,221,1);
+        height: 500px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h4{
+            font-weight: bold;
+            color: map-get($colors, abWhite);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        .col-inner-img{
+            height: 350px;
+            display: flex;
+            align-items: center;
+        }
+        .buy-now{
+            padding-top: 15px;
+            button{
+                border:none;
+                @include border-radius(4px);
+                text-transform: uppercase;
+                padding: 7px 25px;
+                letter-spacing: 4px;
+                background: rgba(255,255,255,0.3);
+                color: map-get($colors, abBlack);
+            }
+        }
+    }
+    .ci-1{
+        background: -webkit-linear-gradient(#ee9ca7,#ffdde1);
+    }
+    .ci-2{
+        background: -webkit-linear-gradient(#02aab0,#00cdac);
+    }
+    .ci-3{
+        background: -webkit-linear-gradient(#4ca1af,#c4e0e5);
+    }
+    .ci-4{
+        background: -webkit-linear-gradient(#eacda3,#d6ae7b);
+    }
+}

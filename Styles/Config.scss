@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+$roboto : 'Roboto', sans-serif;
+$lato : 'Lato', sans-serif;
+$colors: (
+  abRed: #ff628c,
+  abBlack: #282C3F,
+  abWhite: #fff,
+  abLightGrey: rgba(0,0,0,0.6),
+  abLightBlue: #f4f7fa
+);
+.overflowXauto{
+  overflow-x: auto;
+}
+.abLightGrey{color: map-get($colors, abLightGrey)}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; 
+}
+
+@media screen and (max-width:767px){
+  .mpl-0{padding-left: 0rem!important;}
+  .mpr-0{padding-right: 0rem!important;}
+  .mmb-4{margin-bottom: 0.5rem!important;}
+  .mbl-0{border-left: 0rem !important}
+  .mbr-0{border-right: 0rem !important}
+}
