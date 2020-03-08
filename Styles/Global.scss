@@ -2,3 +2,14 @@
 body{
     font-family: $lato;  
 }
+a{
+    color: map-get($colors, abBlack);
+    &:hover{
+        text-decoration: none;
+        color: map-get($colors, abBlack);
+    }
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}

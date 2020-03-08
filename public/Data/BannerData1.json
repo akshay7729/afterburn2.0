@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Shoes",
+        "desc": "Get Shoes",
+        "img": "/assets/nike-shoes-2.png",
+        "url": "shoes"
+    },
+    {
+        "title": "Bags",
+        "desc": "Get Bags",
+        "img": "/assets/bag-1.png",
+        "url": "bags"
+    },
+    {
+        "title": "Watches",
+        "desc": "Get watches",
+        "img": "/assets/watch-1.png",
+        "url": "shoes"
+    }
+]

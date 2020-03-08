@@ -1,0 +1,5 @@
+export const MEGANAV = {
+    LOAD: "MEGANAV_LOAD",
+    RESPONSE: "MEGANAV_RESPONSE",
+    ERROR: "MEGANAV_ERROR"
+}
