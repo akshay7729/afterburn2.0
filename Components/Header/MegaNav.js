@@ -14,20 +14,10 @@ const MegaNavComponent = (props) => {
         megaNavDispatch({type: MEGANAV.LOAD})
         Axios.get('http://demo4999203.mockable.io/octane/mega-menu')
         .then(res => {
-            megaNavDispatch(
-                {
-                    type : MEGANAV.RESPONSE,
-                    payload: res.data 
-                }
-            );
+            megaNavDispatch({type : MEGANAV.RESPONSE,payload: res.data});
         })
         .catch(err => {
-            megaNavDispatch(
-                {
-                    type: MEGANAV.ERROR,
-                    payload: err.message
-                }
-            )
+            megaNavDispatch({type: MEGANAV.ERROR,payload: err.message})
             console.log('mega menu error',err.message);
         })
     },[]);
@@ -56,8 +46,8 @@ const MegaNavComponent = (props) => {
                                         if(cat.type === 'list'){
                                             return (
                                                 <li className="level-2-list" key={index}>
-                                                    <Link href={cat.url} className="level-2-link text-uppercase font-weight-bold">
-                                                    <a>{cat.title}</a>
+                                                    <Link href={cat.url}>
+                                                    <a className="level-2-link text-uppercase font-weight-bold">{cat.title}</a>
                                                     </Link>
                                                     <div className="dash"></div>
                                                     <ul className="level-2-content">

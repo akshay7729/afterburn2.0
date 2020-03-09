@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Header from '../Components/Header/Header'
 import Banner1 from '../Components/Banners/Banner1'
 import MegaNavComponent from '../Components/Header/MegaNav'
+
 const Home = () => {
   const store = ConfigureStore();
   return (
