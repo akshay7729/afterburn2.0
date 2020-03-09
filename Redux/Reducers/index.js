@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import megaNavReducer from './megaNavReducer'
 
-const rootReducer = () => combineReducers({
+const rootReducer = combineReducers({
     megaNav: megaNavReducer
 })
 
