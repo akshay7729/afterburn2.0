@@ -1,0 +1,23 @@
+.search-box{
+    input[type='text']{
+        border:none;
+        background: #f4f7fa;
+        width: 35rem;
+        border-radius: 1rem;
+        padding-left: 2.5rem;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .searchLogo{
+        position: absolute;
+        margin-top: -2px;
+        margin-left: 12px;
+        color: rgba(0,0,0,.6);
+        width: 20px;
+        svg{
+          font-size: 1rem;
+        }
+    }
+}

@@ -48,3 +48,21 @@
         background: -webkit-linear-gradient(#eacda3,#d6ae7b);
     }
 }
+
+.banner-2{
+    margin-bottom: 50px;
+    .carousel-item{
+        height: 400px;
+        img{
+            height: 400px;
+        }
+    }
+    .carousel-indicators{
+        bottom: -50px;
+        li{
+            border-top: none;
+            border-bottom: none;
+            background: #000000;
+        }
+    }
+}

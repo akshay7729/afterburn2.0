@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import Header from '../Components/Header/Header'
 import Banner1 from '../Components/Banners/Banner1'
+import Banner2 from '../Components/Banners/Banner2'
 import MegaNavComponent from '../Components/Header/MegaNav'
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
           <Header />
           <MegaNavComponent />
           <Container>
+            <Banner2 />
             <Banner1 />
           </Container>
         </main>

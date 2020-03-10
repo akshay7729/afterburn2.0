@@ -1,12 +1,10 @@
 import React from 'react'
 import '../../Styles/header.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faHeart, faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
+import Search from '../Search'
 
 const Header = () => (
     <Navbar expand="lg">
@@ -22,11 +20,7 @@ const Header = () => (
                 <Nav.Link href="#link">Shoes</Nav.Link>
             </Nav>
             <Nav className="flex-grow-1 search-box">
-                <Form inline>
-                    <span className="searchLogo"><FontAwesomeIcon icon={faSearch} /></span>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    {/* <Button variant="outline-success">Search</Button> */}
-                </Form>
+                <Search />
             </Nav>
             <Nav className="header-right-nav">
                 <Nav.Link href="#link">
