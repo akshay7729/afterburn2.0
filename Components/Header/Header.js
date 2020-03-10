@@ -31,7 +31,6 @@ const Header = () => (
             <Nav className="header-right-nav">
                 <Nav.Link href="#link">
                     <div>
-                        <span className="icon-bubbles">5</span>
                         <FontAwesomeIcon icon={faUser} />
                     </div>
                     <div>Profile</div>

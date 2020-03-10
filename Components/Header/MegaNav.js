@@ -3,23 +3,14 @@ import '../../Styles/megaNav.scss'
 import Link from 'next/link'
 import {useDispatch, useSelector} from 'react-redux'
 import { MEGANAV } from '../../Redux/Constants'
-import Axios from 'axios'
 
-const MegaNavComponent = (props) => {
+const MegaNavComponent = () => {
 
     const megaNavData = useSelector(state => state.megaNav);
     const megaNavDispatch = useDispatch();
 
     useEffect(() => {
         megaNavDispatch({type: MEGANAV.LOAD})
-        Axios.get('http://demo4999203.mockable.io/octane/mega-menu')
-        .then(res => {
-            megaNavDispatch({type : MEGANAV.RESPONSE,payload: res.data});
-        })
-        .catch(err => {
-            megaNavDispatch({type: MEGANAV.ERROR,payload: err.message})
-            console.log('mega menu error',err.message);
-        })
     },[]);
 
     if(megaNavData.loading){
