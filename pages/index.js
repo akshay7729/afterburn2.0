@@ -9,7 +9,8 @@ import Banner1 from '../Components/Banners/Banner1'
 import Banner2 from '../Components/Banners/Banner2'
 import MegaNavComponent from '../Components/Header/MegaNav'
 
-const Home = () => {
+const Home = (props) => {
+  console.log('props',props)
   const store = ConfigureStore();
   return (
     <Provider store={store}>
@@ -33,6 +34,12 @@ const Home = () => {
       </div>
     </Provider>
   )
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+  const data = 'Hello World';
+  return { props: { data } }
 }
 
 export default Home

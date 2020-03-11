@@ -4,7 +4,7 @@ import Link from 'next/link'
 import {useDispatch, useSelector} from 'react-redux'
 import { MEGANAV } from '../../Redux/Constants'
 
-const MegaNavComponent = () => {
+const MegaNavComponent = (props) => {
 
     const megaNavData = useSelector(state => state.megaNav);
     const megaNavDispatch = useDispatch();

@@ -19,7 +19,7 @@ const Search = () => {
 
     const handleSearchKeyUp = debounce(value => {
         value && console.log('debounced value', value);
-    },500)
+    },700)
 
     return (
         <Form inline>

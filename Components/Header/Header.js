@@ -5,18 +5,20 @@ import { faUser, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icon
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Search from '../Search'
+import Link from 'next/link'
 
 const Header = () => (
     <Navbar expand="lg">
-        <Navbar.Brand 
-            href="#home"
-            className="text-uppercase"
-        >Afterburn
-        </Navbar.Brand>
+        <Link href="/">
+            <a className="text-uppercase navbar-brand">Afterburn</a>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="flex-grow-1 header-home-links">
-                <Nav.Link href="#home">Watches</Nav.Link>
+                <Link href="/plp">
+                    <a className="nav-link">Watches</a>
+                </Link>
+                
                 <Nav.Link href="#link">Shoes</Nav.Link>
             </Nav>
             <Nav className="flex-grow-1 search-box">
