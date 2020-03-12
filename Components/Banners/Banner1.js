@@ -17,7 +17,6 @@ const Banner1 = () => {
         axios.get('/Data/BannerData1.json')
         .then(res => {
             setLoad(true);
-            console.log('res',res)
             setBannerData(res.data);
         })
         .catch(error => {

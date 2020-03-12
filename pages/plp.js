@@ -28,7 +28,7 @@ const PLP = () => {
                             <Dropdown.Toggle id="dropdown-basic">Sort By</Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">Relavance</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Low to Hight</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Low to High</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3">High to Low</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>

@@ -1,3 +1,4 @@
+import React from 'react';
 import {Provider} from 'react-redux'
 import ConfigureStore from '../Store'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -8,10 +9,11 @@ import Header from '../Components/Header/Header'
 import Banner1 from '../Components/Banners/Banner1'
 import Banner2 from '../Components/Banners/Banner2'
 import MegaNavComponent from '../Components/Header/MegaNav'
+import Axios from 'axios'
 
+const store = ConfigureStore();
 const Home = (props) => {
-  console.log('props',props)
-  const store = ConfigureStore();
+  console.log('data',props);
   return (
     <Provider store={store}>
       <div>
@@ -22,7 +24,7 @@ const Home = (props) => {
 
         <main>
           <Header />
-          <MegaNavComponent />
+          <MegaNavComponent initialData = {props}/>
           <Container>
             <Banner2 />
             <Banner1 />
@@ -36,10 +38,16 @@ const Home = (props) => {
   )
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
-  const data = 'Hello World';
-  return { props: { data } }
+Home.getInitialProps = async function(){
+  let response = await Axios.get("http://demo4999203.mockable.io/octane/mega-menu");
+  const megaNavData = await response.data;
+  return {
+    megaNav : {
+      loading: false,
+      megaNav: megaNavData,
+      error: null
+    }
+  }
 }
 
 export default Home

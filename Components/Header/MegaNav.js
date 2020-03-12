@@ -6,11 +6,16 @@ import { MEGANAV } from '../../Redux/Constants'
 
 const MegaNavComponent = (props) => {
 
-    const megaNavData = useSelector(state => state.megaNav);
+    var megaNavData = useSelector(state => state.megaNav);
     const megaNavDispatch = useDispatch();
-
     useEffect(() => {
         megaNavDispatch({type: MEGANAV.LOAD})
+        
+        if(!megaNavData.meganav.length){
+            console.log('mega nav initial props',props);
+            megaNavData = props.initialData;
+        }
+        console.log('megaNavData',megaNavData);
     },[]);
 
     if(megaNavData.loading){
