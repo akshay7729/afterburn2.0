@@ -30,7 +30,7 @@ const MegaNavComponent = (props) => {
         return (
             <div className="mega-nav">
                 <ul className="level-1 d-flex justify-content-center">
-                    {megaNavData.meganav && megaNavData.meganav.map((menu,index) => {
+                    {megaNavData.meganav.length && megaNavData.meganav.map((menu,index) => {
                         return (
                             <li className="level-1-list" key={index}>
                                 <Link href={menu.url}>
