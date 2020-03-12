@@ -39,7 +39,7 @@ const Home = (props) => {
 }
 
 Home.getInitialProps = async function(){
-  let response = await Axios.get("http://demo4999203.mockable.io/octane/mega-menu");
+  let response = await Axios.get("https://demo4999203.mockable.io/octane/mega-menu");
   const megaNavData = await response.data;
   return {
     megaNav : {

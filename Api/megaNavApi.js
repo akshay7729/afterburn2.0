@@ -3,7 +3,7 @@ import Axios from 'axios'
 export const MegaNavApi = async () => {
     try{
         return Axios
-            .get('http://demo4999203.mockable.io/octane/mega-menu')
+            .get('https://demo4999203.mockable.io/octane/mega-menu')
             .then(function(response) {
                 return response.data;
             })
