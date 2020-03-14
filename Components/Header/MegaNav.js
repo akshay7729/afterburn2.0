@@ -10,12 +10,9 @@ const MegaNavComponent = (props) => {
     const megaNavDispatch = useDispatch();
     useEffect(() => {
         megaNavDispatch({type: MEGANAV.LOAD})
-        
         if(!megaNavData.meganav.length){
-            console.log('mega nav initial props',props);
             megaNavData = props.initialData;
         }
-        console.log('megaNavData',megaNavData);
     },[]);
 
     if(megaNavData.loading){

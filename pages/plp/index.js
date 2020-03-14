@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
-import Header from '../Components/Header/Header'
+import Header from '../../Components/Header/Header'
 import Container from 'react-bootstrap/Container'
 import {Row, Col, Dropdown, Card} from 'react-bootstrap'
 import {useRouter} from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faRupeeSign } from '@fortawesome/free-solid-svg-icons'
-import '../Styles/plp.scss'
+import '../../Styles/plp.scss'
 import Link from 'next/link'
+import Facets from '../../Components/Facets'
 
 const PLP = () => {
     const router = useRouter();
+    const [sideNav, setSideNav] = useState(false);
+    const [backdrop, setBackdrop] = useState(false);
+    const handleSideNav = () => {
+      setSideNav(!sideNav);
+      setBackdrop(true)
+    };
+    const handleBackdrop = () => {
+      setSideNav(!sideNav)
+      setBackdrop(false)
+    };
     return (
         <div>
             <Head>
@@ -19,9 +30,18 @@ const PLP = () => {
             </Head>
             <main>
                 <Header />
+                <div className={`sideNav ${sideNav && `show`}`}>
+                  <Facets />
+                  <div className={`backdrop ${backdrop && `d-block`}`} onClick={handleBackdrop}></div>
+                </div>
                 <Container className="plp-options">
                     <Row>
-                        <Col className="filter-icon d-flex"><FontAwesomeIcon icon={faBars} /> Filter</Col>
+                        <Col className="filter-icon d-flex">
+                          <div 
+                            onClick={handleSideNav} 
+                            className="d-flex align-items-center"
+                          ><FontAwesomeIcon icon={faBars} /> Filter</div>
+                        </Col>
                         <Col className="text-center d-flex justify-content-center align-items-center">iPhones</Col>
                         <Col className="text-right sortby">
                         <Dropdown>
