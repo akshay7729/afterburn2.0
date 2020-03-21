@@ -22,6 +22,8 @@ const PLP = () => {
       setSideNav(!sideNav)
       setBackdrop(false)
     };
+
+    console.log('router',router);
     return (
         <div>
             <Head>

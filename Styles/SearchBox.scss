@@ -21,3 +21,31 @@
         }
     }
 }
+.autoComplete-Flyout{
+    position: absolute;
+    margin-top: 39px;
+    width: 500px;
+    margin-left: 35px;
+    .flyout{
+        min-height: 150px;
+        position: relative;
+        z-index: 100;
+        background: #f4f7fa;
+        ul{
+            padding: 15px;
+            li{
+                letter-spacing: 0.8px;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                padding: 5px 0px; 
+                svg{
+                    width: 15px;
+                    color: rgba(0,0,0,.5);
+                }
+                .search-prod-name{padding-left: 15px;}
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

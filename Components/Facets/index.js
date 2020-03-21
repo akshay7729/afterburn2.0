@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faRupeeSign } from '@fortawesome/free-solid-svg-icons'
 
 const Facets = () => {
     const [minPrice, setMinPrice] = useState(0);
@@ -20,12 +22,12 @@ const Facets = () => {
     const handleMinPrice = debounce(value => {
         value && console.log('min price', value);
         setMinPrice(value);
-    },200);
+    },0);
 
     const handleMaxPrice = debounce(value => {
         value && console.log('max price', value);
         setMaxPrice(value);
-    },200);
+    },0);
 
     return (
         <React.Fragment>
@@ -75,6 +77,7 @@ const Facets = () => {
                                     type="range" 
                                     min="0"
                                     max={maxPrice}
+                                    value={minPrice}
                                     className="range w-100"
                                     onChange={e => handleMinPrice(e.target.value)}
                                 />
@@ -87,6 +90,7 @@ const Facets = () => {
                                     type="range" 
                                     min={minPrice}
                                     max="100"
+                                    value={maxPrice}
                                     className="range w-100"
                                     onChange={e => handleMaxPrice(e.target.value)}
                                 />
@@ -133,55 +137,55 @@ const Facets = () => {
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'#000000'}}></div>
+                                        <div className="color-swatch" style={{background:'gold'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'red'}}></div>
+                                        <div className="color-swatch" style={{background:'lightgreen'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'yellow'}}></div>
+                                        <div className="color-swatch" style={{background:'purple'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'green'}}></div>
+                                        <div className="color-swatch" style={{background:'aqua'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'violet'}}></div>
+                                        <div className="color-swatch" style={{background:'blueviolet'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'maroon'}}></div>
+                                        <div className="color-swatch" style={{background:'coral'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'green'}}></div>
+                                        <div className="color-swatch" style={{background:'cornflowerblue'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'violet'}}></div>
+                                        <div className="color-swatch" style={{background:'lightpink'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
                                     </div>
                                     <div className="colors-list-swatch">
-                                        <div className="color-swatch" style={{background:'maroon'}}></div>
+                                        <div className="color-swatch" style={{background:'mediumslateblue'}}></div>
                                         <Form.Group controlId="formBasicCheckbox">
                                             <Form.Check type="checkbox" label="" />
                                         </Form.Group>
