@@ -3,3 +3,9 @@ export const MEGANAV = {
     RESPONSE: "MEGANAV_RESPONSE",
     ERROR: "MEGANAV_ERROR"
 }
+
+export const SEARCH = {
+    LOAD: "SEARCH_LOAD",
+    RESPONSE: "SEARCH_RESPONSE",
+    ERROR: "SEARCH_ERROR"
+}

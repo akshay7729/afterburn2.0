@@ -1,6 +1,6 @@
 import {takeEvery, call, put} from 'redux-saga/effects'
-import {MEGANAV} from '../Redux/Constants'
-import {MegaNavApi} from '../Api'
+import {MEGANAV, SEARCH} from '../Redux/Constants'
+import {MegaNavApi, searchAutocompleteApi} from '../Api'
 
 // wathcer saga
 function* handleMegaNavLoad(){
@@ -20,9 +20,28 @@ function* handleMegaNavLoad(){
     }
 }
 
+// search watcher saga
+function* handleSearchApi(){
+    try{
+        const data = yield call(searchAutocompleteApi);
+        yield put({
+            type: SEARCH.RESPONSE,
+            payload: data
+        });
+        console.log('handleSearchApi');
+    }catch(e){
+        console.log('search error',e);
+        yield put({
+           type: SEARCH.ERROR,
+           payload: e.message 
+        })
+    }
+}
+
 // root saga
 function* rootSaga(){
-    yield takeEvery(MEGANAV.LOAD, handleMegaNavLoad)
+    yield takeEvery(MEGANAV.LOAD, handleMegaNavLoad);
+    yield takeEvery(SEARCH.LOAD, handleSearchApi)
 }
 
 export default rootSaga
