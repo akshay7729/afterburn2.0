@@ -8,21 +8,21 @@ const Banner2 = () => {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="/assets/carousel/shoes-1.jpg"
+                    src="/assets/carousel/watch.jpg"
                     alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="/assets/carousel/shoes-2.jpg"
+                    src="/assets/carousel/iphone.jpg"
                     alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="/assets/carousel/shoes-3.jpg"
+                    src="/assets/carousel/airpods.jpg"
                     alt="Third slide"
                     />
                 </Carousel.Item>

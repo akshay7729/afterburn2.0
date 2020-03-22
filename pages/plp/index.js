@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
+import Head from 'next/head' 
 import Header from '../../Components/Header/Header'
 import Container from 'react-bootstrap/Container'
 import {Row, Col, Dropdown, Card} from 'react-bootstrap'
@@ -9,7 +9,10 @@ import { faBars, faRupeeSign } from '@fortawesome/free-solid-svg-icons'
 import '../../Styles/plp.scss'
 import Link from 'next/link'
 import Facets from '../../Components/Facets'
+import {Provider} from 'react-redux'
+import ConfigureStore from '../../Store'
 
+const store = ConfigureStore();
 const PLP = () => {
     const router = useRouter();
     const [sideNav, setSideNav] = useState(false);
@@ -25,6 +28,7 @@ const PLP = () => {
 
     console.log('router',router);
     return (
+        <Provider store={store}>
         <div>
             <Head>
             <title>PLP</title>
@@ -175,6 +179,7 @@ const PLP = () => {
                 </Container>
             </main>
         </div>
+        </Provider>
     )
 }
 

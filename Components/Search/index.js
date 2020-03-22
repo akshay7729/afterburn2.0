@@ -26,7 +26,7 @@ const Search = () => {
     }
 
     const handleSearchKeyUp = debounce(value => {
-        if(value){
+        if(value && value.length > 3){
             console.log('debounced value', value);
             setDebounceQuery(value);
             setAutoComplete(true);
