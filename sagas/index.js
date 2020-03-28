@@ -1,6 +1,6 @@
 import {takeEvery, call, put} from 'redux-saga/effects'
-import {MEGANAV, SEARCH} from '../Redux/Constants'
-import {MegaNavApi, searchAutocompleteApi} from '../Api'
+import {MEGANAV, SEARCH, PLP} from '../Redux/Constants'
+import {MegaNavApi, searchAutocompleteApi, PlpApi} from '../Api'
 
 // wathcer saga
 function* handleMegaNavLoad(){
@@ -38,10 +38,29 @@ function* handleSearchApi(){
     }
 }
 
+// plp watcher saga
+function* handlePlpApi(){
+    try{
+        const data = yield call(PlpApi);
+        yield put({
+            type: PLP.RESPONSE,
+            payload: data
+        })
+        console.log('plp api handle')
+    }catch(e){
+        console.log('plp api saga error', e.message);
+        yield put({
+            type: PLP.ERROR,
+            payload: e.message
+        })
+    }
+}
+
 // root saga
 function* rootSaga(){
     yield takeEvery(MEGANAV.LOAD, handleMegaNavLoad);
-    yield takeEvery(SEARCH.LOAD, handleSearchApi)
+    yield takeEvery(SEARCH.LOAD, handleSearchApi);
+    yield takeEvery(PLP.LOAD, handlePlpApi);
 }
 
 export default rootSaga

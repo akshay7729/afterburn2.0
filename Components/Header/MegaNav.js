@@ -30,7 +30,7 @@ const MegaNavComponent = (props) => {
                     {megaNavData.meganav.length && megaNavData.meganav.map((menu,index) => {
                         return (
                             <li className="level-1-list" key={index}>
-                                <Link href={menu.url}>
+                                <Link href={`${menu.url}?title=${menu.query}`}>
                                     <a>{menu.name}</a>
                                 </Link>
                                 <div className="backdrop"></div>

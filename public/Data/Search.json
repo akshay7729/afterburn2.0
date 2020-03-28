@@ -3,56 +3,56 @@
         "id": "i1",
         "name": "iPhone Xs",
         "url": "/plp", 
-        "query": "iphonexs",
+        "query": "iphone xs",
         "oos": false
     },
     {
         "id": "i2",
         "name": "iPhone Xs Gold",
         "url": "/plp", 
-        "query": "iphonexsgold",
+        "query": "iphone xs gold",
         "oos": false
     },
     {
         "id": "i3",
         "name": "iPhone Xs 64 GB",
         "url": "/plp", 
-        "query": "iphonexs64gb",
+        "query": "iphone xs 64gb",
         "oos": false
     },
     {
         "id": "i4",
         "name": "Macbook Air",
         "url": "/plp", 
-        "query": "macbookair",
+        "query": "macbook air",
         "oos": false
     },
     {
         "id": "i5",
         "name": "Macbook Pro",
         "url": "/plp", 
-        "query": "macbookpro",
+        "query": "macbook pro",
         "oos": false
     },
     {
         "id": "i6",
         "name": "Macbook Pro 16'",
         "url": "/plp", 
-        "query": "macbookpro16",
+        "query": "macbook pro 16",
         "oos": false
     },
     {
         "id": "i7",
         "name": "Air Pods",
         "url": "/plp", 
-        "query": "airpods",
+        "query": "air pods",
         "oos": false
     },
     {
         "id": "i8",
         "name": "Air Pods Pro",
         "url": "/plp", 
-        "query": "airpodspro",
+        "query": "air pods pro",
         "oos": false
     }
 ]

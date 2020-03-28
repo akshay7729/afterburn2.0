@@ -19,11 +19,13 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="flex-grow-1 header-home-links">
-                    <Link href="/plp" as="/plp">
+                    <Link href="/plp?title=iphone xs max">
                         <a className="nav-link">iphone</a>
                     </Link>
-                    
-                    <Nav.Link href="#link">Shoes</Nav.Link>
+
+                    <Link href="/plp?title=macbook">
+                        <a className="nav-link">Macbook</a>
+                    </Link>
                 </Nav>
                 <Nav className="flex-grow-1 search-box">
                     <Search />

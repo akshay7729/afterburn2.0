@@ -14,7 +14,7 @@ import Axios from 'axios'
 const store = ConfigureStore();
 const Home = (props) => {
   console.log('data',props);
-  return (
+  return ( 
     <Provider store={store}>
       <div>
         <Head>

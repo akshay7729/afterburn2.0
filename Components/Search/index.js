@@ -51,7 +51,7 @@ const Search = () => {
                                         autoCompleteResults.map((search, index) => {
                                             return (
                                                 <li key={index}>
-                                                    <Link href="/"><a>
+                                                    <Link href={`${search.url}?title=${search.query}`}><a>
                                                         <FontAwesomeIcon icon={faSearch} /> 
                                                         <span className="search-prod-name">{search.name}</span>
                                                     </a></Link>

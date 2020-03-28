@@ -2,6 +2,11 @@
 .plp-options{
     border-bottom:1px solid #dddddd;
     padding-bottom: 10px;
+    margin-bottom: 15px;
+    .plp-product-title{
+        letter-spacing: 0.8px;
+        padding-top: 5px;
+    }
     .filter-icon{
         cursor: pointer;
         align-items: center;
@@ -35,26 +40,173 @@
     }
 }
 
-.plp-list{
-    padding-top: 30px;
-    .plp-price{
-        .price{
-            padding: 10px;
-            display: inline-block;
-            svg{
-                width: 10px;
-                margin-right: 3px;
-                margin-top: -2px;
+.plp-prod{
+    .card{
+        margin-bottom: 20px;
+        border-radius: 0;
+        transition: all 0.5s ease;
+        min-height: 280px;
+        .card-title{
+            font-weight: 500;
+            letter-spacing: 0.7px;
+            font-size: 20px;
+            text-overflow: ellipsis;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            .add-to-wishlist{
+                text-align: right;
+                max-width: 50px;
+                display: none;
+                transition: all 0.5s ease;
+                svg{
+                    width: 20px;
+                    margin-top: -3px;
+                }
             }
         }
-        .old-price{
-            color: rgba(0,0,0,0.5);
-            text-decoration: line-through;
+        .card-subtitle{
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        &:hover{
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+            .add-to-wishlist{
+                display: block;
+            }
         }
     }
-    .plp-card{
-        padding-bottom: 30px;
+    .prod-desc-list{
+        padding-top: 15px;
+        li{
+            color: #646464;
+            font-size: 14px;
+            padding-bottom: 3px;
+            display: flex;
+            align-items: center;
+            svg{
+                width: 10px;
+            }
+        }
     }
+
+    .prod-price-sec{
+        padding-top: 15px;
+        letter-spacing: 0.8px;
+        .prod-price-current{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .price-old{
+            color: #646464;
+            svg{
+                width: 8px;
+                margin-top: 0px;
+            }
+        }
+        .price-new{
+            font-weight: 700;
+        }
+        .price-oldPrice{
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+        .price-discount{
+            padding-left: 10px !important;
+            font-size: 14px;
+            color: green;
+        }
+        svg{
+            width: 12px;
+            margin-top: -4px;
+        }
+    }
+    .prod-price-emi{
+        h6{
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    }
+    .prod-reviews{
+        padding-top: 30px;
+        letter-spacing: 1px;
+        svg{width: 15px;}
+    }
+}
+.prod-image{
+    padding-left: 15px;
+    .plp-prod-img{
+        padding-top: 10px;
+        // min-height: 253px;
+    }
+}
+.sort{
+    font-size: 14px;
+    .sort-opt{
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+            font-weight: 700;
+        }
+    }
+}
+
+// checboxes
+.checkboxes{
+    padding-top: 5px;
+    .filter-form{
+        padding-left: 25px;
+    }
+    .fulter-label{
+        padding-bottom: 20px;
+    }
+}
+.checkboxLabel{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    background: #ddd;
+    cursor: pointer;
+    .checked{
+        margin-left: 4px;
+        font-size: 12px;
+        position: absolute;
+        margin-top: 1px;
+        visibility: hidden;
+    }
+}
+.filters-checkbox{
+    opacity: 0;
+    cursor: pointer;
+}
+.filters-checkbox:checked + .checkboxLabel{
+    .checked{
+        visibility: visible;
+    }
+}
+.slider{
+    width: 100%;
+    .range{
+        height: 5px;
+        background: map-get($colors, oBlack);
+        -webkit-appearance: none;
+        appearance: none;
+        &:focus{
+            outline: none;
+        }
+    }
+    .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border:4px solid map-get($colors,oBlack);
+        border-radius: 50%;
+        cursor: pointer;
+      }
 }
 
 .sideNav{

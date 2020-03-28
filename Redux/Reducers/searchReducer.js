@@ -1,7 +1,7 @@
 import {SEARCH} from '../Constants'
 
 const initialState = {
-    loading: false,
+    loading: false, 
     search: [],
     error: null
 }

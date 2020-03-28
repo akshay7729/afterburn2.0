@@ -9,3 +9,9 @@ export const SEARCH = {
     RESPONSE: "SEARCH_RESPONSE",
     ERROR: "SEARCH_ERROR"
 }
+
+export const PLP = {
+    LOAD: "PLP_LOAD",
+    RESPONSE: "PLP_RESPONSE",
+    ERROR: "PLP_ERROR"
+}

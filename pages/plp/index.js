@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head' 
 import Header from '../../Components/Header/Header'
 import Container from 'react-bootstrap/Container'
-import {Row, Col, Dropdown, Card} from 'react-bootstrap'
+import {Row, Col, Dropdown} from 'react-bootstrap'
 import {useRouter} from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faRupeeSign } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../../Styles/plp.scss'
-import Link from 'next/link'
 import Facets from '../../Components/Facets'
 import {Provider} from 'react-redux'
 import ConfigureStore from '../../Store'
+import MegaNavComponent from '../../Components/Header/MegaNav'
+import PlpComponent from '../../Components/Plp/PlpComponent'
 
 const store = ConfigureStore();
 const PLP = () => {
@@ -26,7 +27,7 @@ const PLP = () => {
       setBackdrop(false)
     };
 
-    console.log('router',router);
+    console.log('router plp index',router);
     return (
         <Provider store={store}>
         <div>
@@ -36,6 +37,7 @@ const PLP = () => {
             </Head>
             <main>
                 <Header />
+                <MegaNavComponent />
                 <div className={`sideNav ${sideNav && `show`}`}>
                   <Facets />
                   <div className={`backdrop ${backdrop && `d-block`}`} onClick={handleBackdrop}></div>
@@ -48,7 +50,9 @@ const PLP = () => {
                             className="d-flex align-items-center"
                           ><FontAwesomeIcon icon={faBars} /> Filter</div>
                         </Col>
-                        <Col className="text-center d-flex justify-content-center align-items-center">iPhones</Col>
+                        <Col className="text-center d-flex justify-content-center align-items-center text-uppercase plp-product-title">
+                          {router.query.title}
+                        </Col>
                         <Col className="text-right sortby">
                         <Dropdown>
                             <Dropdown.Toggle id="dropdown-basic">Sort By</Dropdown.Toggle>
@@ -61,122 +65,7 @@ const PLP = () => {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="plp-list">
-                    <Row>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                        <Col md={3} className="plp-card">
-                            <Link href="/">
-                                <a>
-                                <Card className="pt-2">
-                                    <Card.Img variant="top" src="/assets/Products/xs.jpg" />
-                                    <Card.Body>
-                                        <Card.Title className="text-center">iPhone XS Gold</Card.Title>
-                                        <div className="text-center plp-price card-text">
-                                            <div className="price old-price"><FontAwesomeIcon icon={faRupeeSign} /> 69999</div>
-                                            <div className="price new-price"><FontAwesomeIcon icon={faRupeeSign} /> 59999</div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                                </a>
-                            </Link>
-                        </Col>
-                    </Row>
-                </Container>
+                <PlpComponent />
             </main>
         </div>
         </Provider>
