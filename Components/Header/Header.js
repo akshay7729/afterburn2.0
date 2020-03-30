@@ -6,11 +6,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Search from '../Search'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
 
 const Header = () => {
-    const router = useRouter();
-    console.log('header router', router)
     return (
         <Navbar expand="lg">
             <Link href="/">

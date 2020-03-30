@@ -27,14 +27,13 @@ const PLPComponent = () => {
 
         var populatePLP = getFinalProducts && getFinalProducts.map((product,index) => {
             return(
-                    <Col xs={12} className="plp-prod">
-                        <Link href="/" key={index}>
+                    <Col xs={12} className="plp-prod" key={index}>
+                        <Link href="/">
                         <a>
                         <Card>
                             <Row>
                                 <Col md={3} className="prod-image">
                                     <Card.Img 
-                                        top 
                                         width="100%" 
                                         src={product.imageLink}
                                         alt="Card image cap"

@@ -12,6 +12,7 @@ import {Provider} from 'react-redux'
 import ConfigureStore from '../../Store'
 import MegaNavComponent from '../../Components/Header/MegaNav'
 import PlpComponent from '../../Components/Plp/PlpComponent'
+import Breadcrumb from '../../Components/Breadcrumb'
 
 const store = ConfigureStore();
 const PLP = () => {
@@ -26,8 +27,6 @@ const PLP = () => {
       setSideNav(!sideNav)
       setBackdrop(false)
     };
-
-    console.log('router plp index',router);
     return (
         <Provider store={store}>
         <div>
@@ -38,6 +37,7 @@ const PLP = () => {
             <main>
                 <Header />
                 <MegaNavComponent />
+                <Breadcrumb />
                 <div className={`sideNav ${sideNav && `show`}`}>
                   <Facets />
                   <div className={`backdrop ${backdrop && `d-block`}`} onClick={handleBackdrop}></div>
